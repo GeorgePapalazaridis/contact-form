@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Form</title>
+
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+    </head>
+
+    <body>
+        <main>
+            <form action="#" method="POST">
+                <h1>Contact Us</h1>
+                <div>
+                    <div>
+                        <label for="first-name">First Name *</label><br>
+                        <input type="text" id="first-name" name="first-name" required>
+                    </div>
+                    <div>
+                        <label for="last-name">Last Name *</label><br>
+                        <input type="text" id="last-name" name="last-name" required>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="email">Email *</label><br>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div>
+                    <div>
+                        <fieldset id="type-query">
+                            <label>
+                                <input type="radio" name="type-query" value="general-enquery" checked> General Enquery
+                            </label>
+                            <label>
+                                <input type="radio" name="type-query" value="support-request"> Support Request
+                            </label>
+                        </fieldset>
+                    </div>
+                </div>
+                <div>
+                    <label for="message">Message<br>
+                        <textarea id="message" name="message"></textarea>
+                    </label>
+                </div>
+                <div>
+                    <input type="checkbox" id="subscribe" name="subscribe" required> I consent to being contacted by the
+                    team *
+                </div>
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </main>
+    </body>
+
+</html>

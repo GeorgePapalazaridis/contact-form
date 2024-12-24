@@ -1,0 +1,38 @@
+.form-wrapper {
+    margin: 0;
+    background-color: var(--green-light);
+    border-radius: 12px;
+    box-shadow: 1px 15px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    width: 80%;
+}
+
+.selection-wrapper {
+    margin-bottom: 1.5rem;
+}
+
+.field-wrapper {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid var(--grey-medium);
+    border-radius: 6px;
+    margin-top: 0.8rem;
+}
+
+.field-txt {
+    font-size: 1rem;
+    color: var(--grey-dark);
+    font-weight: 400;
+}
+
+input:focus:invalid {
+    border: 2px solid var(--red);
+}
+
+#type-query {
+    gap: 1rem;
+}

@@ -16,6 +16,6 @@
 }
 
 .submit-btn:hover {
-    background-color: hsl(169, 82%, 24%);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: hsl(169, 76%, 17%);
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.1);
 }

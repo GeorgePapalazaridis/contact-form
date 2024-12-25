@@ -19,34 +19,40 @@
 
                     <div class="selection-wrapper">
                         <div>
-                            <label for="first-name">First Name *</label><br>
+                            <label for="first-name" class="form-label">First Name <span
+                                    class="required-field-indicator">*</span></label><br>
                             <input type="text" id="first-name" name="first-name" class="field-wrapper" required>
                         </div>
                         <div>
-                            <label for="last-name">Last Name *</label><br>
+                            <label for="last-name" class="form-label">Last Name <span
+                                    class="required-field-indicator">*</span></label><br>
                             <input type="text" id="last-name" name="last-name" class="field-wrapper" required>
                         </div>
                     </div>
 
                     <div class="selection-wrapper">
-                        <label for="email">Email *</label><br>
+                        <label for="email" class="form-label">Email <span
+                                class="required-field-indicator">*</span></label><br>
                         <input type="email" id="email" name="email" class="field-wrapper" required>
                     </div>
 
                     <div class="selection-wrapper">
-                        <label for="type-query">Query Type *</label><br>
+                        <label for="type-query" class="form-label">Query Type <span
+                                class="required-field-indicator">*</span></label><br>
                         <fieldset id="type-query">
                             <label class="field-wrapper">
-                                <input type="radio" name="type-query" value="general-enquery" checked> General Enquery
+                                <input type="radio" name="type-query" value="general-enquery" class="custom-radio"
+                                    checked> General Enquiry
                             </label>
                             <label class="field-wrapper">
-                                <input type="radio" name="type-query" value="support-request"> Support Request
+                                <input type="radio" name="type-query" value="support-request" class="custom-radio">
+                                Support Request
                             </label>
                         </fieldset>
                     </div>
 
                     <div class="selection-wrapper">
-                        <label for="message">Message<br>
+                        <label for="message" class="form-label">Message<br>
                             <textarea id="message" name="message" class="field-wrapper" rows="3"></textarea>
                         </label>
                     </div>
@@ -55,7 +61,7 @@
                         <input type="checkbox" id="subscribe" name="subscribe" required>
                         <p class="field-txt">I consent
                             to being contacted by
-                            the team *</p>
+                            the team <span class="required-field-indicator">*</span></p>
                     </div>
 
                     <div class="#">

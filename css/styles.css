@@ -1,6 +1,7 @@
 @import "_variables.css";
 @import "_form.css";
 @import "_button.css";
+@import "normalize.css";
 
 * {
     box-sizing: border-box;

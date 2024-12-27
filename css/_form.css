@@ -21,6 +21,7 @@
     border: 1px solid var(--grey-medium);
     border-radius: 6px;
     margin-top: 0.8rem;
+    cursor: pointer;
 }
 
 .field-txt {
@@ -64,10 +65,6 @@ fieldset .field-wrapper {
     border: 2px solid #ccc;
     border-radius: 50%;
     position: relative;
-}
-
-.custom-radio:checked {
-    border-color: var(--green-medium);
 }
 
 .custom-radio:checked::before {

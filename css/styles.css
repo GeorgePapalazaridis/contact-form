@@ -13,12 +13,13 @@
 
 body {
   margin: 0;
+  padding: 1.5em;
   font-family: var(--font-family);
   font-size: var(--font-size);
-  background-image: url("./../images/background-image-2.jpg"); /* Replace with your image URL */
-  background-size: cover; /* Ensures the image covers the entire background */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-  background-position: center; /* Centers the image */
+  background-image: url("./../images/background-image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   color: var(--gray-dark);
   display: flex;
   justify-content: center;
@@ -28,7 +29,7 @@ body {
 
 main {
   margin: 0;
-  padding: 1rem;
+  padding: 1.5rem;
   background-color: var(--green-light);
   border-radius: 12px;
   box-shadow: 1px 15px 20px rgba(0, 0, 0, 0.2);

@@ -3,6 +3,7 @@
 @import "_button.css";
 @import "_responsiveness.css";
 @import "_validation.css";
+@import "_checkbox.css";
 
 * {
   margin: 0;

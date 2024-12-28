@@ -52,8 +52,8 @@ fieldset .field-wrapper:has(input[type="radio"]:checked) {
 
 .custom-radio {
   appearance: none;
-  width: 1.1rem;
-  height: 1.1rem;
+  width: 1rem;
+  height: 1rem;
   border: 2px solid #ccc;
   border-radius: 50%;
   position: relative;

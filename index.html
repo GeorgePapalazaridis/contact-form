@@ -49,11 +49,13 @@
                     <fieldset id="type-query">
                         <legend class="form-label">Query Type <span class="required-field-indicator">*</span></legend>
                         <label class="field-wrapper">
-                            <input type="radio" id="general-enquiry" name="type-query" value="general-enquiry" required>
+                            <input type="radio" id="general-enquiry" name="type-query" value="general-enquiry"
+                                class="custom-radio" required>
                             General Enquiry
                         </label>
                         <label class="field-wrapper">
-                            <input type="radio" id="support-request" name="type-query" value="support-request">
+                            <input type="radio" id="support-request" name="type-query" value="support-request"
+                                class="custom-radio">
                             Support Request
                         </label>
                     </fieldset>
@@ -63,7 +65,8 @@
 
                 <div class="selection-wrapper">
                     <label for="message" class="form-label">Message</label>
-                    <textarea id="message" name="message" class="field-wrapper" rows="3" minlength="10"></textarea>
+                    <textarea id="message" name="message" class="field-wrapper" rows="3" minlength="10"
+                        placeholder="Please leave your message here.."></textarea>
                     <small class="error-message" id="message-error"></small>
                 </div>
 

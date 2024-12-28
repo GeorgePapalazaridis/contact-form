@@ -14,9 +14,10 @@ body {
   margin: 0;
   font-family: var(--font-family);
   font-size: var(--font-size);
-  background-color: var(--white);
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-image: url("./../images/background-image-2.jpg"); /* Replace with your image URL */
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-position: center; /* Centers the image */
   color: var(--gray-dark);
   display: flex;
   justify-content: center;

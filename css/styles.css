@@ -2,6 +2,7 @@
 @import "_form.css";
 @import "_button.css";
 @import "_responsiveness.css";
+@import "_validation.css";
 
 * {
   margin: 0;
@@ -43,7 +44,8 @@ form > h1 {
   color: var(--gray-dark);
 }
 
-label {
+label,
+legend {
   font-size: 1rem;
   font-weight: 400;
   color: var(--grey-dark);

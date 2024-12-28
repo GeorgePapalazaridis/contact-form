@@ -1,74 +1,81 @@
 @import "_variables.css";
 @import "_form.css";
 @import "_button.css";
-@import "normalize.css";
+@import "_responsiveness.css";
 
 * {
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    font-family: var(--font-family);
-    font-size: var(--font-size);
-    background-color: var(--white);
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: var(--gray-dark);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+  margin: 0;
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: var(--gray-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 main {
-    background-color: var(--white);
-    padding: 2rem;
-    border-radius: 12px;
-    width: 100%;
-    max-width: 600px;
+  margin: 0;
+  padding: 1rem;
+  background-color: var(--green-light);
+  border-radius: 12px;
+  box-shadow: 1px 15px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  width: 80%;
 }
 
 form > h1 {
-    font-size: 1.5rem;
-    font-weight: 500;
-    margin-bottom: 1.5rem;
-    color: var(--gray-dark);
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: var(--gray-dark);
 }
 
 label {
-    font-size: 1rem;
-    font-weight: 400;
-    color: var(--grey-dark);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--grey-dark);
 }
 
 form > div:first-of-type {
-    display: flex;
-    gap: 1rem;
+  display: flex;
+  gap: 1rem;
 }
 
 form > div:first-of-type > div {
-    flex: 1;
+  flex: 1;
 }
 
 textarea {
-    resize: none;
-    height: 100%;
+  resize: none;
+  height: 100%;
 }
 
 fieldset {
-    display: flex;
-    justify-content: space-between;
-    border: none;
-    padding: 0;
+  display: flex;
+  justify-content: space-between;
+  border: none;
+  padding: 0;
 }
 
 fieldset label {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 input[type="ckeckbox"] {
-    margin-right: 0.5rem;
+  margin-right: 0.5rem;
 }

@@ -1,13 +1,9 @@
 .form-wrapper {
-  margin: 0;
-  background-color: var(--green-light);
+  background-color: var(--white);
+  padding: 2rem;
   border-radius: 12px;
-  box-shadow: 1px 15px 20px rgba(0, 0, 0, 0.2);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 80vh;
-  width: 80%;
+  width: 100%;
+  max-width: 600px;
 }
 
 .selection-wrapper {
@@ -50,10 +46,6 @@ input:focus:invalid {
   border: 2px solid var(--red);
 }
 
-#type-query {
-  gap: 1rem;
-}
-
 fieldset .field-wrapper:has(input[type="radio"]:checked) {
   background-color: var(--green-light);
 }
@@ -78,4 +70,15 @@ fieldset .field-wrapper:has(input[type="radio"]:checked) {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.subcribe-txt {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+#type-query {
+  gap: 1rem;
 }

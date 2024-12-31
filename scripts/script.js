@@ -12,16 +12,29 @@ const customErrorMessages = {
 function validateField(field, errorMessageId, showError = true) {
     const errorElement = document.getElementById(errorMessageId);
 
+    // Check validity using field's built-in `validity` API
     if (!field.validity.valid) {
         if (showError) {
-            errorElement.textContent =
-                customErrorMessages[field.id] || "This field is required.";
+            if (field.validity.valueMissing) {
+                // Show "required" error message if field is empty
+                errorElement.textContent =
+                    customErrorMessages[field.id] || "This field is required.";
+            } else if (field.validity.tooShort) {
+                // Show specific "too short" error for the message field
+                errorElement.textContent = `Your message must be at least ${field.minLength} characters.`;
+            } else {
+                // Fallback for other validation errors
+                errorElement.textContent =
+                    customErrorMessages[field.id] || "Invalid input.";
+            }
+
             errorElement.classList.add("active");
             field.classList.add("invalid");
         }
         field.classList.remove("valid");
         return false;
     } else {
+        // Clear errors if field is valid
         errorElement.textContent = "";
         errorElement.classList.remove("active");
         field.classList.remove("invalid");
@@ -127,4 +140,5 @@ function setupEventListeners() {
     });
 }
 
+// Initialize event listeners on DOMContentLoaded
 document.addEventListener("DOMContentLoaded", setupEventListeners);

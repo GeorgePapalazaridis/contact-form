@@ -1,22 +1,22 @@
 /* Custom Checkbox */
 input[type="checkbox"] {
-  appearance: none; /* Remove the default checkbox appearance */
-  width: 1.5rem;
-  height: 1.5rem;
-  border: 2px solid var(--grey-medium);
-  border-radius: 4px; /* Optional: Rounded corners */
-  background-color: var(--white);
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: all 0.3s ease;
+    appearance: none; /* Remove the default checkbox appearance */
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 2px solid var(--grey-medium);
+    border-radius: 4px; /* Optional: Rounded corners */
+    background-color: var(--white);
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: all 0.3s ease;
 }
 
 /* Checked State */
 input[type="checkbox"]:checked {
-  background-image: url("./../images/icon-checkbox-check.svg");
-  background-size: 1rem 1rem; /* Size of the SVG */
-  background-position: center;
-  background-repeat: no-repeat;
-  border-color: var(--green-medium);
+    background-image: url("./../images/icon-checkbox-check.svg");
+    background-size: 1rem 1rem; /* Size of the SVG */
+    background-position: center;
+    background-repeat: no-repeat;
+    border-color: var(--green-medium);
 }

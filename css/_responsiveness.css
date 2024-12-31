@@ -1,0 +1,48 @@
+/* Extra Small (phones) */
+@media (max-width: 576px) {
+    :root {
+        --font-size: var(--font-size-small);
+    }
+
+    .selection-wrapper,
+    #type-query {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+    }
+}
+
+/* Small (phones to tablets) */
+@media (min-width: 577px) and (max-width: 768px) {
+    :root {
+        --font-size: var(--font-size-default);
+    }
+
+    .selection-wrapper,
+    #type-query {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+    }
+}
+
+/* Medium (tablets to small laptops) */
+@media (min-width: 769px) and (max-width: 992px) {
+    :root {
+        --font-size: var(--font-size-large);
+    }
+}
+
+/* Large (small laptops to desktops) */
+@media (min-width: 993px) and (max-width: 1200px) {
+    :root {
+        --font-size: var(--font-size-extra-large);
+    }
+}
+
+/* Extra Large (large desktops) */
+@media (min-width: 1201px) {
+    :root {
+        --font-size: var(--font-size-extra-extra-large);
+    }
+}

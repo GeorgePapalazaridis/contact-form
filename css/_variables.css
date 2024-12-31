@@ -11,5 +11,10 @@
 
     /* Font */
     --font-family: "Karla", sans-serif;
-    --font-size: 16px;
+    --font-size: var(--font-size-default); /* Default font size */
+    --font-size-default: 16px;
+    --font-size-small: 14px;
+    --font-size-large: 18px;
+    --font-size-extra-large: 20px;
+    --font-size-extra-extra-large: 22px;
 }

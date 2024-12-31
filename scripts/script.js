@@ -1,3 +1,13 @@
+// Custom error messages
+const customErrorMessages = {
+    "first-name": "Please enter your first name. It is required.",
+    "last-name": "Please enter your last name. It is required.",
+    email: "Please enter a valid email address.",
+    "type-query": "Please select a query type. This field is required.",
+    message: "Please enter at least 10 characters in your message.",
+    subscribe: "You must consent to being contacted.",
+};
+
 // Helper function to validate a single field
 function validateField(field, errorMessageId, showError = true) {
     const errorElement = document.getElementById(errorMessageId);
@@ -5,7 +15,7 @@ function validateField(field, errorMessageId, showError = true) {
     if (!field.validity.valid) {
         if (showError) {
             errorElement.textContent =
-                field.validationMessage || "This field is required.";
+                customErrorMessages[field.id] || "This field is required.";
             errorElement.classList.add("active");
             field.classList.add("invalid");
         }
@@ -28,8 +38,7 @@ function validateQueryType(showError = true) {
 
     if (!selected) {
         if (showError) {
-            errorElement.textContent =
-                "Please select a query type. This field is required.";
+            errorElement.textContent = customErrorMessages["type-query"];
             errorElement.classList.add("active");
             fieldWrapper.classList.add("invalid");
         }
@@ -42,18 +51,44 @@ function validateQueryType(showError = true) {
     }
 }
 
-// Add event listeners for validation
-document.addEventListener("DOMContentLoaded", function () {
+// Validate checkbox
+function validateCheckbox(field, errorMessageId, showError = true) {
+    const errorElement = document.getElementById(errorMessageId);
+
+    if (!field.checked) {
+        if (showError) {
+            errorElement.textContent = customErrorMessages[field.id];
+            errorElement.classList.add("active");
+            field.classList.add("invalid");
+        }
+        return false;
+    } else {
+        errorElement.textContent = "";
+        errorElement.classList.remove("active");
+        field.classList.remove("invalid");
+        return true;
+    }
+}
+
+// Event listeners
+function setupEventListeners() {
     const form = document.getElementById("contactForm");
 
     // Add blur listeners for all fields except radio buttons
     form.querySelectorAll("input, textarea").forEach((field) => {
-        if (field.type !== "radio") {
+        if (field.type !== "radio" && field.type !== "checkbox") {
             const errorMessageId = `${field.id}-error`;
+            field.addEventListener(
+                "blur",
+                () => validateField(field, errorMessageId) // Validate field on blur
+            );
+        }
 
-            field.addEventListener("blur", () => {
-                validateField(field, errorMessageId); // Validate field on blur
-            });
+        if (field.type === "checkbox") {
+            const errorMessageId = `${field.id}-error`;
+            field.addEventListener("change", () =>
+                validateCheckbox(field, errorMessageId)
+            );
         }
     });
 
@@ -70,23 +105,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Validate all fields except radio buttons on submit
         form.querySelectorAll("input, textarea").forEach((field) => {
-            if (field.type !== "radio") {
-                const errorMessageId = `${field.id}-error`;
-                if (!validateField(field, errorMessageId, true)) {
-                    isValid = false;
-                }
+            const errorMessageId = `${field.id}-error`;
+
+            if (field.type === "radio") return;
+            if (field.type === "checkbox") {
+                if (!validateCheckbox(field, errorMessageId)) isValid = false;
+            } else if (!validateField(field, errorMessageId)) {
+                isValid = false;
             }
         });
 
         // Validate query type on submit
-        if (!validateQueryType(true)) {
-            isValid = false;
-        }
+        if (!validateQueryType()) isValid = false;
 
         // If the form is valid, submit it
         if (isValid) {
+            // Simulate submission success
+            document.getElementById("contactForm").reset();
             alert("Form submitted successfully!");
-            this.submit();
         }
     });
-});
+}
+
+document.addEventListener("DOMContentLoaded", setupEventListeners);

@@ -1,10 +1,10 @@
 /* Custom Checkbox */
 input[type="checkbox"] {
     appearance: none; /* Remove the default checkbox appearance */
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.1rem;
+    height: 1.1rem;
     border: 2px solid var(--grey-medium);
-    border-radius: 4px; /* Optional: Rounded corners */
+    border-radius: 4px;
     background-color: var(--white);
     cursor: pointer;
     display: inline-block;

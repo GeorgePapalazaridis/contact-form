@@ -10,6 +10,22 @@
         flex: 1;
         flex-direction: column;
     }
+
+    .checkbox-wrapper {
+        font-size: var(--font-size-extra-small);
+        gap: 2px;
+    }
+
+    /* Adjust textarea rows for extra small screens */
+    #message {
+        min-height: 230px; /* Adjust height (corresponds to ~6 rows) */
+        padding: 10px; /* Ensure proper spacing for usability */
+    }
+
+    input[type="checkbox"] {
+        width: 0.8rem !important;
+        height: 0.8rem !important;
+    }
 }
 
 /* Small (phones to tablets) */
@@ -23,6 +39,17 @@
         display: flex;
         flex: 1;
         flex-direction: column;
+    }
+
+    /* Adjust textarea rows for small screens */
+    #message {
+        min-height: 180px; /* Adjust height (corresponds to ~5 rows) */
+        padding: 10px; /* Ensure proper spacing */
+    }
+
+    input[type="checkbox"] {
+        width: 0.8rem !important;
+        height: 0.8rem !important;
     }
 }
 

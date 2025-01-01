@@ -83,6 +83,23 @@ function validateCheckbox(field, errorMessageId, showError = true) {
     }
 }
 
+function showConfirmationMessage() {
+    const confirmationMessage = document.getElementById("confirmation-message");
+
+    if (!confirmationMessage) {
+        console.error("Confirmation message element not found!");
+        return;
+    }
+
+    confirmationMessage.classList.add("show");
+
+    const computedStyle = window.getComputedStyle(confirmationMessage);
+
+    setTimeout(() => {
+        confirmationMessage.classList.remove("show");
+    }, 5000);
+}
+
 // Event listeners
 function setupEventListeners() {
     const form = document.getElementById("contactForm");
@@ -134,8 +151,8 @@ function setupEventListeners() {
         // If the form is valid, submit it
         if (isValid) {
             // Simulate submission success
-            document.getElementById("contactForm").reset();
-            alert("Form submitted successfully!");
+            showConfirmationMessage();
+            form.reset(); // Reset the form fields
         }
     });
 }

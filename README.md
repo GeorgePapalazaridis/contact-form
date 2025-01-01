@@ -16,7 +16,8 @@ Welcome to the **Contact Form Project**! This project demonstrates a modern and 
 -   **Material Icons**:
     -   Integrated with Google's Material Icons for a clean, modern UI.
 
-![Empty Form State: Highlighting the default view of the form when no fields are filled]([https://github.com/user-attachments/form-empty.png](https://github.com/user-attachments/assets/9ab37578-360d-4d66-87d9-23a8c6c90540)
+![Empty Form State: Highlighting the default view of the form when no fields are filled](https://github.com/user-attachments/assets/e21dab2a-6500-420e-808a-d9a4db770ac6)
+
 
 ![Filled Form State: Showcasing the form after the user has completed the inputs](https://github.com/user-attachments/assets/4d2b2bef-1b22-4c1d-9c18-d74c27862374)
 

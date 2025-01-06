@@ -1,10 +1,10 @@
-@import "_variables.css";
-@import "_form.css";
-@import "_button.css";
-@import "_responsiveness.css";
-@import "_validation.css";
-@import "_checkbox.css";
-@import "_confirmation-message.css";
+@import "css/_variables.css";
+@import "css/_form.css";
+@import "css/_button.css";
+@import "css/_responsiveness.css";
+@import "css/_validation.css";
+@import "css/_checkbox.css";
+@import "css/_confirmation-message.css";
 
 * {
     margin: 0;

@@ -1,35 +1,40 @@
 # Contact Form Project
 
-Welcome to the **Contact Form Project**! This project demonstrates a modern and responsive **Contact Form** with built-in validation, semantic HTML, styled using CSS and enhanced with vanilla JavaScript for interactive functionality. Includes client-side validation and utilizes sessionStorage for temporary data persistence.
+Welcome to the **Contact Form Project**! This project showcases a modern, responsive, and accessible **Contact Form** with built-in validation. Styled using **SCSS** and enhanced with vanilla JavaScript, it features client-side validation, a responsive layout, and a live demo hosted on GitHub Pages.
 
 ## 🚀 Features
 
 -   **Form Validation**:
-    -   Real-time validation for required fields.
-    -   Custom error messages for each input.
--   **Responsiveness**:
-    -   Fully responsive design, adapting seamlessly to mobile, tablet, and desktop views.
+    -   Real-time validation for required fields with custom error messages.
+-   **Responsive Design**:
+    -   Fully responsive layout for mobile, tablet, and desktop views.
 -   **User Feedback**:
-    -   Confirmation message on successful form submission.
+    -   Confirmation message displayed after successful form submission.
 -   **Accessible Design**:
-    -   Uses semantic HTML and accessible labels.
--   **Material Icons**:
-    -   Integrated with Google's Material Icons for a clean, modern UI.
+    -   Includes semantic HTML, ARIA attributes, and accessible labels.
+-   **SCSS Styling**:
+    -   Modular and reusable SCSS structure for efficient styling.
 
-![Empty Form State: Highlighting the default view of the form when no fields are filled](https://github.com/user-attachments/assets/e21dab2a-6500-420e-808a-d9a4db770ac6)
+## 🌐 Live Demo
 
-![Filled Form State: Showcasing the form after the user has completed the inputs](https://github.com/user-attachments/assets/4d2b2bef-1b22-4c1d-9c18-d74c27862374)
+Check out the live site here: [Contact Form on GitHub Pages](https://geopapa.github.io/contact-form/)
 
-![Mobile Form View: Demonstrating the responsive layout of the form on smaller screens](https://github.com/user-attachments/assets/a1225da0-2982-4a64-aae6-7e95a238ba2c)
+## 🎨 Screenshots
 
-![Error Validation Example: Displaying the real-time validation errors when the fields are left blank](https://github.com/user-attachments/assets/b6a4d56b-836d-4a0a-a02f-b3da502a9afa)
+![Empty Form State: Default view of the form when no fields are filled](https://github.com/user-attachments/assets/e21dab2a-6500-420e-808a-d9a4db770ac6)
 
-![Success Confirmation Message: Showing the confirmation message after a successful form submission](https://github.com/user-attachments/assets/a6417701-ab3e-4e5a-87bd-215e891edfc7)
+![Filled Form State: The form after the user has completed the inputs](https://github.com/user-attachments/assets/4d2b2bef-1b22-4c1d-9c18-d74c27862374)
+
+![Mobile Form View: Responsive layout of the form on smaller screens](https://github.com/user-attachments/assets/a1225da0-2982-4a64-aae6-7e95a238ba2c)
+
+![Error Validation Example: Real-time validation errors displayed when fields are left blank](https://github.com/user-attachments/assets/b6a4d56b-836d-4a0a-a02f-b3da502a9afa)
+
+![Success Confirmation Message: Confirmation message shown after successful submission](https://github.com/user-attachments/assets/a6417701-ab3e-4e5a-87bd-215e891edfc7)
 
 ## 💻 Technologies Used
 
 -   **HTML5** for semantic and accessible markup.
--   **CSS3** for styling with a modular and responsive approach.
+-   **SCSS** for modular and responsive styling.
 -   **Vanilla JavaScript** for dynamic functionality and validation.
 -   **Material Icons** for icons in the confirmation message.
 
@@ -38,29 +43,29 @@ Welcome to the **Contact Form Project**! This project demonstrates a modern and 
 ```plaintext
 contact-form/
 ├── css/
-│   ├── _button.css                # Button styles
-│   ├── _checkbox.css              # Checkbox styles
-│   ├── _confirmation-message.css  # Styles for the confirmation message
-│   ├── _form.css                  # General form styles
-│   ├── _responsiveness.css        # Media queries for responsive design
-│   ├── _validation.css            # Error message styling
-│   ├── _variables.css             # CSS variables for consistent theming
-│   ├── normalize.css              # Cross-browser normalization
-│   └── styles.css                 # Main entry point importing all partials
+│   ├── _button.scss                # Button styles
+│   ├── _checkbox.scss              # Checkbox styles
+│   ├── _confirmation-message.scss  # Styles for the confirmation message
+│   ├── _form.scss                  # General form styles
+│   ├── _responsiveness.scss        # Media queries for responsive design
+│   ├── _validation.scss            # Error message styling
+│   ├── _variables.scss             # SCSS variables for consistent theming
+│   ├── normalize.scss              # Cross-browser normalization
+│   └── styles.scss                 # Main entry point importing all partials
 ├── images/
-│   ├── background-image.jpg       # Background image for the form
-│   ├── icon-checkbox-check.svg    # Checkbox icon
-│   ├── icon-radio-selected.svg    # Radio button selected icon
-│   ├── icon-success-check.svg     # Success icon
+│   ├── background-image.jpg        # Background image for the form
+│   ├── icon-checkbox-check.svg     # Checkbox icon
+│   ├── icon-radio-selected.svg     # Radio button selected icon
+│   ├── icon-success-check.svg      # Success icon
 ├── scripts/
-│   ├── validation.js              # Handles validation logic
-│   ├── confirmation.js            # Manages confirmation message
-│   ├── eventListeners.js          # Sets up event listeners
-│   └── main.js                    # Main entry point
-├── index.html                     # Main HTML file
-├── .gitignore                     # Files and directories to ignore in Git
-├── LICENSE                        # Project license
-└── README.md                      # Project documentation
+│   ├── validation.js               # Handles validation logic
+│   ├── confirmation.js             # Manages confirmation message
+│   ├── eventListeners.js           # Sets up event listeners
+│   └── main.js                     # Main entry point
+├── index.html                      # Main HTML file
+├── .gitignore                      # Files and directories to ignore in Git
+├── LICENSE                         # Project license
+└── README.md                       # Project documentation
 ```
 
 ## ⚙️ Installation
@@ -70,7 +75,7 @@ To view or modify this project locally:
 1. **Clone the Repository**:
 
     ```bash
-    git clone https://github.com/YourUsername/contact-form.git
+    git clone https://github.com/geopapa/contact-form.git
     ```
 
 2. **Navigate to the Project Directory**:
@@ -79,18 +84,32 @@ To view or modify this project locally:
     cd contact-form
     ```
 
-3. **Open the Project in a Browser**:
-   Open the `index.html` file in your browser to view the form.
+3. **Install Dependencies** (if any):
+    - Install `sass` globally to compile SCSS:
+
+    ```bash
+    npm install -g sass
+    ```
+
+4. **Compile SCSS**:
+    Watch SCSS files and compile them into CSS:
+
+    ```bash
+    sass --watch css/styles.scss css/styles.css
+    ```
+
+5. **Open the Project in a Browser**:
+    Use a local server or directly open `index.html` in your browser.
 
 ## 🛠️ How It Works
 
 1. **Real-Time Validation**:
-    - Each input field is validated on blur.
-    - Error messages are displayed below invalid fields.
+    - Validates input fields on blur.
+    - Displays custom error messages for invalid fields.
 2. **Form Submission**:
-    - On successful validation, a confirmation message appears.
+    - On successful validation, a confirmation message appears for 5 seconds.
 3. **Responsive Design**:
-    - CSS media queries ensure the form adapts to various screen sizes.
+    - SCSS media queries ensure the form adapts to various screen sizes.
 
 ## 📈 Future Enhancements
 
@@ -98,8 +117,10 @@ To view or modify this project locally:
     -   Connect the form to a server to handle submissions.
 -   **Email Notifications**:
     -   Automatically send email notifications on form submission.
--   **Additional Fields**:
-    -   Add more input types, such as file uploads or phone numbers.
+-   **Improved Accessibility**:
+    -   Enhance ARIA attributes for better screen reader support.
+-   **Automated Testing**:
+    -   Add tests for validation logic and responsive design.
 
 ## 📝 License
 
@@ -109,6 +130,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 -   [Google Fonts](https://fonts.google.com/) for Material Icons.
 -   [Normalize.css](https://necolas.github.io/normalize.css/) for cross-browser consistency.
+-   [Frontend Mentor](https://www.frontendmentor.io/) for inspiring this project.
 
 ---
 

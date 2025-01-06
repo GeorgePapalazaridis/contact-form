@@ -321,23 +321,18 @@ fieldset .field-wrapper:has(input[type=radio]:checked) {
   color: var(--red);
   font-size: clamp(0.65rem, 1.5vw, 0.8rem); /* Min: 0.65rem, Max: 0.8rem */
   margin-top: var(--spacing-extra-small);
-  display: none; /* Hide error messages by default */
+  min-height: 1.2em; /* Reserve space for one line of text */
+  visibility: hidden; /* Hide without affecting layout */
+  opacity: 0; /* Make invisible */
+  transition: opacity 0.3s ease-in-out; /* Smooth fade-in effect */
+  display: block; /* Ensure the reserved space is always applied */
 }
 
 .error-message.active {
-  display: block;
-  animation: fadeIn 0.3s ease-in-out;
+  visibility: visible; /* Make visible */
+  opacity: 1; /* Fully opaque */
 }
 
-/* Keyframes for fade-in */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 /* Custom Checkbox */
 input[type=checkbox] {
   appearance: none; /* Remove the default checkbox appearance */
@@ -436,9 +431,9 @@ body {
   font-family: var(--font-family);
   font-size: var(--font-size);
   background-image: url("../images/background-image.jpg");
-  background-size: cover;
+  background-size: auto; /* Prevents resizing of the background */
+  background-position: 0% 0%; /* Locks the position to the top-left corner */
   background-repeat: no-repeat;
-  background-position: center;
   color: var(--gray-dark);
   display: flex;
   justify-content: center;

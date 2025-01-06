@@ -25,20 +25,14 @@
     color: var(--red);
     font-size: clamp(0.65rem, 1.5vw, 0.8rem); /* Min: 0.65rem, Max: 0.8rem */
     margin-top: var(--spacing-extra-small);
-    display: none; /* Hide error messages by default */
+    min-height: 1.2em; /* Reserve space for one line of text */
+    visibility: hidden; /* Hide without affecting layout */
+    opacity: 0; /* Make invisible */
+    transition: opacity 0.3s ease-in-out; /* Smooth fade-in effect */
+    display: block; /* Ensure the reserved space is always applied */
 }
 
 .error-message.active {
-    display: block;
-    animation: fadeIn 0.3s ease-in-out;
-}
-
-/* Keyframes for fade-in */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    visibility: visible; /* Make visible */
+    opacity: 1; /* Fully opaque */
 }

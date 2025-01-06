@@ -18,9 +18,9 @@ body {
     font-family: var(--font-family);
     font-size: var(--font-size);
     background-image: url("../images/background-image.jpg");
-    background-size: cover;
+    background-size: auto; /* Prevents resizing of the background */
+    background-position: 0% 0%; /* Locks the position to the top-left corner */
     background-repeat: no-repeat;
-    background-position: center;
     color: var(--gray-dark);
     display: flex;
     justify-content: center;

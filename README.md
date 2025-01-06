@@ -21,15 +21,16 @@ Check out the live site here: [Contact Form on GitHub Pages](https://georgepapal
 
 ## 🎨 Screenshots
 
-![Empty Form State: Default view of the form when no fields are filled](https://github.com/user-attachments/assets/e21dab2a-6500-420e-808a-d9a4db770ac6)
+![Empty Form State: Default view of the form when no fields are filled](https://github.com/user-attachments/assets/b21d2d18-a666-4f62-a40d-c748bcaec3b0)
 
-![Filled Form State: The form after the user has completed the inputs](https://github.com/user-attachments/assets/4d2b2bef-1b22-4c1d-9c18-d74c27862374)
+![Filled Form State: The form after the user has completed the inputs](https://github.com/user-attachments/assets/a1adc21d-8217-4427-89f7-ab9409d7710c)
 
-![Mobile Form View: Responsive layout of the form on smaller screens](https://github.com/user-attachments/assets/a1225da0-2982-4a64-aae6-7e95a238ba2c)
+![Mobile Form View: Responsive layout of the form on smaller screens](https://github.com/user-attachments/assets/63d858db-e372-42ea-ad9b-49a8893a7cd8)
 
-![Error Validation Example: Real-time validation errors displayed when fields are left blank](https://github.com/user-attachments/assets/b6a4d56b-836d-4a0a-a02f-b3da502a9afa)
+![Error Validation Example: Real-time validation errors displayed when fields are left blank](https://github.com/user-attachments/assets/934f0b7e-3ac1-4a81-a404-216d59b0735e)
 
-![Success Confirmation Message: Confirmation message shown after successful submission](https://github.com/user-attachments/assets/a6417701-ab3e-4e5a-87bd-215e891edfc7)
+![Success Confirmation Message: Confirmation message shown after successful submission](https://github.com/user-attachments/assets/b43c721e-74c3-4680-8408-e1d1df86e255)
+
 
 ## 💻 Technologies Used
 

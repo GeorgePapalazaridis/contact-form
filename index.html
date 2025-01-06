@@ -10,7 +10,12 @@
 
         <title>Contact Form</title>
 
-        <base href="/contact-form/">
+        <script type="module">
+            const isProduction = window.location.hostname === "georgepapalazaridis.github.io";
+            const baseUrl = isProduction ? "/contact-form/" : "/";
+            document.write(`<base href="${baseUrl}">`);
+        </script>
+
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" type="text/css" href="css/styles.css">
         <!-- <link rel="icon" href="favicon.ico"> -->
@@ -111,7 +116,16 @@
             </div>
         </main>
 
-        <script type="module" src="/contact-form/scripts/main.js"></script>
+        <script type="module" src="scripts/main.js"></script>
+        <script type="module">
+            // Fallback for production
+            if (window.location.hostname === "georgepapalazaridis.github.io") {
+                const script = document.createElement("script");
+                script.type = "module";
+                script.src = "/contact-form/scripts/main.js";
+                document.body.appendChild(script);
+            }
+        </script>
     </body>
 
 </html>

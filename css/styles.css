@@ -382,7 +382,7 @@ input[type=checkbox]:checked {
   top: 20px;
   left: 50%;
   transform: translate(-50%, -20px);
-  background-color: var(--green-medium);
+  background-color: var(--green-dark);
   color: var(--white);
   padding: 15px 20px;
   border-radius: 8px;

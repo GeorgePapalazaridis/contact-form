@@ -17,7 +17,7 @@ Welcome to the **Contact Form Project**! This project showcases a modern, respon
 
 ## 🌐 Live Demo
 
-Check out the live site here: [Contact Form on GitHub Pages](https://https://georgepapalazaridis.github.io/contact-form/)
+Check out the live site here: [Contact Form on GitHub Pages](https://georgepapalazaridis.github.io/contact-form/)
 
 ## 🎨 Screenshots
 

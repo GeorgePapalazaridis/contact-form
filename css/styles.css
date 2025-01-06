@@ -33,7 +33,7 @@ main {
     padding: 1.5rem;
     background-color: var(--green-light);
     border-radius: 12px;
-    box-shadow: 1px 15px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 15px 20px rgba(0, 0, 0, 0.15);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,9 +79,9 @@ fieldset {
 fieldset label {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: var(--spacing-extra-small);
 }
 
-input[type="ckeckbox"] {
+input[type="checkbox"] {
     margin-right: 0.5rem;
 }

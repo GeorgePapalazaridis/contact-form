@@ -3,38 +3,40 @@
     top: 20px; /* Place it at the top of the viewport */
     left: 50%;
     transform: translateX(-50%);
-    background-color: #2e524a;
-    color: #ffffff;
+    background-color: var(--green-dark);
+    color: var(--white);
     padding: 20px 30px; /* Increase padding for better spacing */
     border-radius: 10px; /* Slightly larger border radius */
     text-align: left; /* Align text to the left */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for better visibility */
     z-index: 1000; /* Ensure it appears above all other elements */
-    display: none; /* Hidden by default */
+    display: none;
     font-family: "Karla", sans-serif;
-    font-size: 16px; /* Adjust font size */
-    line-height: 1.5; /* Add spacing between lines */
+    font-size: var(--font-size-default);
+    line-height: 1.5;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
 /* Header row: Icon and Title */
 .confirmation-header {
-    display: flex; /* Use flexbox to align items in a row */
-    align-items: center; /* Vertically center-align the items */
-    margin-bottom: 10px; /* Add spacing below the header */
-    gap: 6px;
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--spacing-extra-small);
+    gap: var(--spacing-extra-small);
 }
 
 /* Icon styling */
 .confirmation-icon {
     display: inline-block;
-    font-size: 20px; /* Slightly larger icon */
-    margin-right: 10px; /* Add spacing between icon and text */
-    color: #ffffff; /* Ensure the icon matches the text color */
+    font-size: var(--font-size-large);
+    margin-right: var(--spacing-small);
+    color: var(--white);
 }
 
 /* Bold styling for title */
 .confirmation-header strong {
-    font-size: 18px; /* Slightly larger for emphasis */
+    font-size: var(--font-size-large);
     font-weight: bold; /* Ensure boldness for prominence */
 }
 
@@ -44,5 +46,6 @@
 }
 
 .confirmation-message.show {
-    display: block !important; /* Ensure visibility */
+    display: block !important;
+    opacity: 1;
 }

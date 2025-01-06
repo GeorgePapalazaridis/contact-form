@@ -366,7 +366,7 @@ input[type=checkbox]:hover {
 
 /* Checked State */
 input[type=checkbox]:checked {
-  background-image: url("images/icon-checkbox-check.svg");
+  background-image: url("/images/icon-checkbox-check.svg");
   background-size: 1rem 1rem; /* Size of the SVG */
   background-position: center;
   background-repeat: no-repeat;
@@ -435,7 +435,7 @@ body {
   padding: 1.5em;
   font-family: var(--font-family);
   font-size: var(--font-size);
-  background-image: url("images/background-image.jpg");
+  background-image: url("/images/background-image.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

@@ -24,9 +24,9 @@
     <body>
         <main>
             <!-- Confirmation Message -->
-            <div id="confirmation-message" class="confirmation-message hidden">
+            <div id="confirmation-message" class="confirmation-message hidden" aria-live="assertive">
                 <div class="confirmation-header">
-                    <i class="material-icons">check_circle_outline</i>
+                    <i class="material-icons" aria-hidden="true">check_circle_outline</i>
                     <strong>Message Sent!</strong>
                 </div>
                 <p>Thanks for completing the form. We’ll be in touch soon!</p>
@@ -44,7 +44,7 @@
                             </label>
                             <input type="text" id="first-name" name="first-name" class="field-wrapper"
                                 autocomplete="given-name" required minlength="2">
-                            <small class="error-message" id="first-name-error"></small>
+                            <small class="error-message" id="first-name-error" aria-live="polite"></small>
                         </div>
                         <div>
                             <label for="last-name" class="form-label">Last Name
@@ -52,7 +52,7 @@
                             </label>
                             <input type="text" id="last-name" name="last-name" class="field-wrapper"
                                 autocomplete="family-name" required minlength="2">
-                            <small class="error-message" id="last-name-error"></small>
+                            <small class="error-message" id="last-name-error" aria-live="polite"></small>
                         </div>
                     </div>
 
@@ -61,7 +61,7 @@
                             <span class="required-field-indicator">*</span>
                         </label>
                         <input type="email" id="email" name="email" class="field-wrapper" autocomplete="email" required>
-                        <small class="error-message" id="email-error"></small>
+                        <small class="error-message" id="email-error" aria-live="polite"></small>
                     </div>
 
                     <div class="selection-wrapper">
@@ -80,7 +80,7 @@
                                 Support Request
                             </label>
                         </fieldset>
-                        <small class="error-message" id="type-query-error"></small>
+                        <small class="error-message" id="type-query-error" aria-live="polite"></small>
                     </div>
 
                     <div class="selection-wrapper">
@@ -89,7 +89,7 @@
                         </label>
                         <textarea id="message" name="message" class="field-wrapper" rows="4" minlength="10" required
                             placeholder="Enter your message here. We’d love to hear from you!"></textarea>
-                        <small class="error-message" id="message-error"></small>
+                        <small class="error-message" id="message-error" aria-live="polite"></small>
                     </div>
 
                     <div class="selection-wrapper">
@@ -97,11 +97,13 @@
                             <input type="checkbox" id="subscribe" name="subscribe" required>
                             I consent to being contacted by the team <span class="required-field-indicator">*</span>
                         </label>
-                        <small class="error-message" id="subscribe-error"></small>
+                        <small class="error-message" id="subscribe-error" aria-live="polite"></small>
                     </div>
 
                     <div class="button-wrapper">
-                        <button class="submit-btn btn-txt" type="submit">Send Message</button>
+                        <button class="submit-btn btn-txt" type="submit" aria-label="Send your message">
+                            Send Message
+                        </button>
                     </div>
                 </form>
             </div>

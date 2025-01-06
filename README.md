@@ -40,6 +40,7 @@ Check out the live site here: [Contact Form on GitHub Pages](https://geopapa.git
 
 ## 📂 File Structure
 
+```plaintext
 contact-form/
 ├── css/
 │   ├── _button.scss                # Button styles
@@ -86,6 +87,7 @@ To view or modify this project locally:
     ```
 
 3. **Install Dependencies** (if any):
+
     - Install `sass` globally to compile SCSS:
 
     ```bash
@@ -93,14 +95,14 @@ To view or modify this project locally:
     ```
 
 4. **Compile SCSS**:
-    Watch SCSS files and compile them into CSS:
+   Watch SCSS files and compile them into CSS:
 
     ```bash
     sass --watch css/styles.scss css/styles.css
     ```
 
 5. **Open the Project in a Browser**:
-    Use a local server or directly open `index.html` in your browser.
+   Use a local server or directly open `index.html` in your browser.
 
 ## 🛠️ How It Works
 

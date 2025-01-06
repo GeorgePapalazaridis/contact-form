@@ -36,6 +36,10 @@
     .confirmation-message > .confirmation-header strong {
         font-size: 1rem;
     }
+
+    body > main {
+        width: calc(100% - 0.2rem);
+    }
 }
 
 /* Small (phones to tablets) */

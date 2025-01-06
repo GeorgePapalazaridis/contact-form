@@ -26,7 +26,7 @@ body {
 }
 
 main {
-    margin: 0;
+    margin: 0 auto;
     padding: 1.5rem;
     background-color: var(--green-light);
     border-radius: 12px;
@@ -35,7 +35,8 @@ main {
     justify-content: center;
     align-items: center;
     min-height: 80vh;
-    width: 80%;
+    max-width: 100%; /* Prevent it from exceeding the viewport width */
+    width: calc(100% - 2rem);
 }
 
 form > h1 {

@@ -1,7 +1,12 @@
 /* Normal State */
 .field-wrapper {
     border: 1px solid var(--grey-medium);
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.field-wrapper:focus-within {
+    border-color: var(--green-medium); /* Match valid state */
+    box-shadow: 0 0 5px var(--green-medium); /* Subtle glow */
 }
 
 /* Invalid State */
@@ -18,11 +23,22 @@
 /* Error Message */
 .error-message {
     color: var(--red);
-    font-size: 0.7em;
-    margin-top: 0.2em;
+    font-size: clamp(0.65rem, 1.5vw, 0.8rem); /* Min: 0.65rem, Max: 0.8rem */
+    margin-top: var(--spacing-extra-small);
     display: none; /* Hide error messages by default */
 }
 
 .error-message.active {
-    display: block; /* Show error message when active */
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Keyframes for fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

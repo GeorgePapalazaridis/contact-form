@@ -18,7 +18,6 @@ Welcome to the **Contact Form Project**! This project demonstrates a modern and 
 
 ![Empty Form State: Highlighting the default view of the form when no fields are filled](https://github.com/user-attachments/assets/e21dab2a-6500-420e-808a-d9a4db770ac6)
 
-
 ![Filled Form State: Showcasing the form after the user has completed the inputs](https://github.com/user-attachments/assets/4d2b2bef-1b22-4c1d-9c18-d74c27862374)
 
 ![Mobile Form View: Demonstrating the responsive layout of the form on smaller screens](https://github.com/user-attachments/assets/a1225da0-2982-4a64-aae6-7e95a238ba2c)
@@ -54,7 +53,10 @@ contact-form/
 │   ├── icon-radio-selected.svg    # Radio button selected icon
 │   ├── icon-success-check.svg     # Success icon
 ├── scripts/
-│   └── script.js                  # JavaScript for form validation and interactivity
+│   ├── validation.js              # Handles validation logic
+│   ├── confirmation.js            # Manages confirmation message
+│   ├── eventListeners.js          # Sets up event listeners
+│   └── main.js                    # Main entry point
 ├── index.html                     # Main HTML file
 ├── .gitignore                     # Files and directories to ignore in Git
 ├── LICENSE                        # Project license

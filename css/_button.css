@@ -1,21 +1,34 @@
 .submit-btn {
     width: 100%;
     background-color: var(--green-medium);
-    padding: 0.75rem;
+    padding: var(--spacing-small);
     border: none;
     border-radius: 6px;
     cursor: pointer;
     text-align: center;
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .btn-txt {
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: var(--white);
     font-weight: 400;
     letter-spacing: 2px;
 }
 
 .submit-btn:hover {
-    background-color: hsl(169, 76%, 17%);
+    background-color: var(--green-dark);
     box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.submit-btn:focus {
+    outline: 2px solid var(--green-medium);
+    outline-offset: 2px;
+    box-shadow: 0 0 5px var(--green-medium);
+}
+
+.submit-btn:disabled {
+    background-color: var(--grey-medium);
+    cursor: not-allowed;
+    opacity: 0.6;
 }

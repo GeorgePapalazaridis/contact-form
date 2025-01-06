@@ -1,6 +1,6 @@
 "use strict";
-import { validate, validateQueryType } from "scripts/validation.js";
-import { showConfirmationMessage } from "scripts/confirmation.js";
+import { validate, validateQueryType } from "./validation.js";
+import { showConfirmationMessage } from "./confirmation.js";
 
 // Set up event listeners
 export function setupEventListeners() {

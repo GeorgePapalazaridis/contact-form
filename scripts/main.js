@@ -1,4 +1,4 @@
 "use strict";
-import { setupEventListeners } from "scripts/eventListeners.js";
+import { setupEventListeners } from "./eventListeners.js";
 
 document.addEventListener("DOMContentLoaded", setupEventListeners);

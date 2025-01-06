@@ -1,87 +1,507 @@
-@import "css/_variables.css";
-@import "css/_form.css";
-@import "css/_button.css";
-@import "css/_responsiveness.css";
-@import "css/_validation.css";
-@import "css/_checkbox.css";
-@import "css/_confirmation-message.css";
+@charset "UTF-8";
+:root {
+  /* Primary Colors */
+  --green-light: hsl(148, 38%, 91%);
+  --green-medium: hsl(169, 82%, 27%);
+  --green-dark: hsl(169, 76%, 17%);
+  --red: hsl(0, 66%, 54%);
+  /* Neutral Colors */
+  --white: hsl(0, 0%, 100%);
+  --grey-light: hsl(187, 15%, 95%);
+  --grey-medium: hsl(187, 15%, 79%);
+  --grey-dark: hsl(187, 24%, 22%);
+  --black: hsl(0, 0%, 0%);
+  /* Font */
+  --font-family: "Karla", "Arial", sans-serif;
+  --font-size: var(--font-size-default);
+  --font-size-default: 16px;
+  --font-size-extra-small: 12px;
+  --font-size-small: 14px;
+  --font-size-large: 18px;
+  --font-size-extra-large: 20px;
+  --font-size-extra-extra-large: 22px;
+  /* Spacing Variables */
+  --spacing-extra-small: 0.25rem; /* 4px */
+  --spacing-small: 0.5rem; /* 8px */
+  --spacing-medium: 1rem; /* 16px */
+  --spacing-large: 1.5rem; /* 24px */
+  --spacing-extra-large: 2rem; /* 32px */
+  /* Line Heights */
+  --line-height-default: 1.5;
+  --line-height-small: 1.3;
+  --line-height-large: 1.8;
+}
+
+.form-wrapper {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 600px;
+  min-width: 320px; /* Ensure it doesn’t shrink too much */
+}
+
+.selection-wrapper {
+  margin-bottom: var(--spacing-medium);
+}
+
+.field-wrapper {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  color: #656565;
+  border-radius: 6px;
+  margin-top: var(--spacing-small);
+  cursor: pointer;
+}
+
+body div .field-wrapper:focus {
+  outline: none;
+  border: 1px solid var(--green-medium);
+  box-shadow: 0 0 5px var(--green-medium);
+}
+
+input:focus:invalid {
+  border: 1px solid var(--red);
+  box-shadow: 0 0 5px var(--red);
+}
+
+.field-txt {
+  font-size: 1rem;
+  color: var(--grey-dark);
+  font-weight: 400;
+}
+
+.form-label {
+  font-weight: 400;
+  color: var(--grey-dark);
+}
+
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-small);
+}
+
+.required-field-indicator {
+  color: var(--green-medium);
+  font-weight: bold;
+  margin-left: var(--spacing-extra-small);
+}
+
+fieldset .field-wrapper:has(input[type=radio]:checked) {
+  background-color: var(--green-light);
+}
+
+/* Custom Radio Buttons */
+.custom-radio {
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid var(--grey-medium);
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.custom-radio:hover {
+  border-color: var(--green-medium);
+}
+
+.custom-radio:checked::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--green-medium);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.custom-radio:focus {
+  outline: none;
+  border-color: var(--green-medium);
+  box-shadow: 0 0 5px var(--green-medium);
+}
+
+.subscribe-txt {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--spacing-small);
+}
+
+#type-query {
+  gap: var(--spacing-medium);
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: var(--green-medium);
+  padding: var(--spacing-small);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn-txt {
+  font-size: 1rem;
+  color: var(--white);
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.submit-btn:hover {
+  background-color: var(--green-dark);
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.submit-btn:focus {
+  outline: 2px solid var(--green-medium);
+  outline-offset: 2px;
+  box-shadow: 0 0 5px var(--green-medium);
+}
+
+.submit-btn:disabled {
+  background-color: var(--grey-medium);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Extra Small (phones) */
+@media (max-width: 576px) {
+  :root {
+    --font-size: var(--font-size-small);
+  }
+  .selection-wrapper,
+  #type-query {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+  .checkbox-wrapper {
+    font-size: var(--font-size-extra-small);
+    gap: var(--spacing-extra-small);
+  }
+  /* Adjust textarea rows for extra small screens */
+  #message {
+    min-height: 15em; /* Adjust height (corresponds to ~6 rows) */
+    padding: var(--spacing-small);
+  }
+  .checkbox-wrapper input[type=checkbox] {
+    width: 0.7rem;
+    height: 0.7rem;
+  }
+  main > .confirmation-message {
+    padding: 15px 20px;
+    line-height: 1.4;
+    font-size: var(--font-size-small);
+  }
+  .confirmation-message > .confirmation-header strong {
+    font-size: 1rem;
+  }
+}
+/* Small (phones to tablets) */
+@media (min-width: 577px) and (max-width: 768px) {
+  :root {
+    --font-size: var(--font-size-default);
+  }
+  .selection-wrapper,
+  #type-query {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+  /* Adjust textarea rows for small screens */
+  #message {
+    min-height: 12em; /* Adjust height (corresponds to ~5 rows) */
+    padding: var(--spacing-small);
+  }
+  .checkbox-wrapper input[type=checkbox] {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+  main > .confirmation-message {
+    padding: 20px 25px;
+    line-height: 1.5;
+    font-size: 0.9rem;
+  }
+  .confirmation-message > .confirmation-header strong {
+    font-size: 1.1rem;
+  }
+}
+/* Medium (tablets to small laptops) */
+@media (min-width: 769px) and (max-width: 992px) {
+  :root {
+    --font-size: var(--font-size-large);
+  }
+  .checkbox-wrapper input[type=checkbox] {
+    width: 0.9rem;
+    height: 0.9rem;
+  }
+  main > .confirmation-message {
+    padding: 20px 30px;
+    line-height: 1.5;
+    font-size: var(--font-size-default);
+  }
+  .confirmation-message > .confirmation-header strong {
+    font-size: 1.2rem;
+  }
+}
+/* Large (small laptops to desktops) */
+@media (min-width: 993px) and (max-width: 1200px) {
+  :root {
+    --font-size: var(--font-size-extra-large);
+  }
+  .form-wrapper {
+    margin: 0 auto;
+    max-width: 70%;
+  }
+  .checkbox-wrapper input[type=checkbox] {
+    width: 1rem;
+    height: 1rem;
+  }
+  main > .confirmation-message {
+    padding: 25px 35px;
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+  .confirmation-message > .confirmation-header strong {
+    font-size: 1.3rem;
+  }
+}
+/* Extra Large (large desktops) */
+@media (min-width: 1201px) {
+  :root {
+    --font-size: var(--font-size-extra-extra-large);
+  }
+  .form-wrapper {
+    margin: 0 auto;
+    max-width: 50%;
+  }
+  main > .confirmation-message {
+    padding: 30px 40px;
+    line-height: 1.6;
+    font-size: 1.1rem;
+  }
+  .confirmation-message > .confirmation-header strong {
+    font-size: 1.4rem;
+  }
+}
+/* Normal State */
+.field-wrapper {
+  border: 1px solid var(--grey-medium);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.field-wrapper:focus-within {
+  border-color: var(--green-medium); /* Match valid state */
+  box-shadow: 0 0 5px var(--green-medium); /* Subtle glow */
+}
+
+/* Invalid State */
+.field-wrapper.invalid,
+#type-query.invalid {
+  border-color: var(--red);
+}
+
+/* Valid State */
+.field-wrapper.valid {
+  border-color: var(--green-medium);
+}
+
+/* Error Message */
+.error-message {
+  color: var(--red);
+  font-size: clamp(0.65rem, 1.5vw, 0.8rem); /* Min: 0.65rem, Max: 0.8rem */
+  margin-top: var(--spacing-extra-small);
+  display: none; /* Hide error messages by default */
+}
+
+.error-message.active {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Keyframes for fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Custom Checkbox */
+input[type=checkbox] {
+  appearance: none; /* Remove the default checkbox appearance */
+  width: 1.1rem;
+  height: 1.1rem;
+  border: 2px solid var(--grey-medium);
+  border-radius: 4px;
+  background-color: var(--white);
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Forcefully remove browser focus styles */
+input[type=checkbox]:focus {
+  outline: none;
+  border: 1px solid var(--green-medium);
+  box-shadow: 0 0 5px var(--green-medium);
+}
+
+/* Hover State */
+input[type=checkbox]:hover {
+  border-color: var(--green-medium);
+}
+
+/* Checked State */
+input[type=checkbox]:checked {
+  background-image: url("images/icon-checkbox-check.svg");
+  background-size: 1rem 1rem; /* Size of the SVG */
+  background-position: center;
+  background-repeat: no-repeat;
+  border-color: var(--green-medium);
+}
+
+.confirmation-message {
+  opacity: 0; /* Start fully hidden */
+  visibility: hidden; /* Prevent interactions */
+  transform: translateY(-20px); /* Subtle movement */
+  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, -20px);
+  background-color: var(--green-medium);
+  color: var(--white);
+  padding: 15px 20px;
+  border-radius: 8px;
+  z-index: 1000;
+  font-family: var(--font-family);
+  line-height: 1.5;
+}
+
+/* Header row: Icon and Title */
+.confirmation-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing-extra-small);
+  gap: var(--spacing-extra-small);
+}
+
+/* Icon styling */
+.confirmation-icon {
+  display: inline-block;
+  font-size: var(--font-size-large);
+  margin-right: var(--spacing-small);
+  color: var(--white);
+}
+
+/* Bold styling for title */
+.confirmation-header strong {
+  font-size: var(--font-size-large);
+  font-weight: bold; /* Ensure boldness for prominence */
+}
+
+/* Paragraph styling */
+.confirmation-message p {
+  margin: 0; /* Remove extra margins */
+}
+
+.confirmation-message.show {
+  opacity: 1; /* Fully visible */
+  visibility: visible; /* Enable interactions */
+  transform: translate(-50%, 0); /* Reset movement */
+}
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 1.5em;
-    font-family: var(--font-family);
-    font-size: var(--font-size);
-    background-image: url("images/background-image.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    color: var(--gray-dark);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+  margin: 0;
+  padding: 1.5em;
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  background-image: url("images/background-image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: var(--gray-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 main {
-    margin: 0;
-    padding: 1.5rem;
-    background-color: var(--green-light);
-    border-radius: 12px;
-    box-shadow: 1px 15px 20px rgba(0, 0, 0, 0.15);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 80vh;
-    width: 80%;
+  margin: 0;
+  padding: 1.5rem;
+  background-color: var(--green-light);
+  border-radius: 12px;
+  box-shadow: 1px 15px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  width: 80%;
 }
 
 form > h1 {
-    font-size: 1.5rem;
-    font-weight: 500;
-    margin-bottom: 1.5rem;
-    color: var(--gray-dark);
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: var(--gray-dark);
 }
 
 label,
 legend {
-    font-size: 1rem;
-    font-weight: 400;
-    color: var(--grey-dark);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--grey-dark);
 }
 
 form > div:first-of-type {
-    display: flex;
-    gap: 1rem;
+  display: flex;
+  gap: 1rem;
 }
 
 form > div:first-of-type > div {
-    flex: 1;
+  flex: 1;
 }
 
 textarea {
-    resize: none;
-    height: 100%;
+  resize: none;
+  height: 100%;
 }
 
 fieldset {
-    display: flex;
-    justify-content: space-between;
-    border: none;
-    padding: 0;
+  display: flex;
+  justify-content: space-between;
+  border: none;
+  padding: 0;
 }
 
 fieldset label {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-extra-small);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-extra-small);
 }
 
-input[type="checkbox"] {
-    margin-right: 0.5rem;
+input[type=checkbox] {
+  margin-right: 0.5rem;
 }
+
+/*# sourceMappingURL=styles.css.map */

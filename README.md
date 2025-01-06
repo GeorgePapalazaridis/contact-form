@@ -40,7 +40,6 @@ Check out the live site here: [Contact Form on GitHub Pages](https://geopapa.git
 
 ## 📂 File Structure
 
-```plaintext
 contact-form/
 ├── css/
 │   ├── _button.scss                # Button styles
@@ -50,22 +49,24 @@ contact-form/
 │   ├── _responsiveness.scss        # Media queries for responsive design
 │   ├── _validation.scss            # Error message styling
 │   ├── _variables.scss             # SCSS variables for consistent theming
-│   ├── normalize.scss              # Cross-browser normalization
-│   └── styles.scss                 # Main entry point importing all partials
+│   ├── normalize.css               # Cross-browser normalization
+│   ├── styles.css                  # Compiled CSS file
+│   ├── styles.css.map              # Source map for the compiled CSS
+│   └── styles.scss                 # Main entry point importing all SCSS partials
 ├── images/
 │   ├── background-image.jpg        # Background image for the form
 │   ├── icon-checkbox-check.svg     # Checkbox icon
 │   ├── icon-radio-selected.svg     # Radio button selected icon
-│   ├── icon-success-check.svg      # Success icon
+│   └── icon-success-check.svg      # Success icon
 ├── scripts/
-│   ├── validation.js               # Handles validation logic
 │   ├── confirmation.js             # Manages confirmation message
 │   ├── eventListeners.js           # Sets up event listeners
-│   └── main.js                     # Main entry point
-├── index.html                      # Main HTML file
+│   ├── main.js                     # Main entry point
+│   └── validation.js               # Handles validation logic
 ├── .gitignore                      # Files and directories to ignore in Git
 ├── LICENSE                         # Project license
-└── README.md                       # Project documentation
+├── README.md                       # Project documentation
+└── index.html                      # Main HTML file
 ```
 
 ## ⚙️ Installation
